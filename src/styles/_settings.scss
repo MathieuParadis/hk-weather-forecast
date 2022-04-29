@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ VARIABLES $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// -------------------- SCREEN SIZE VARIABLES -------------------- //
+$small-phone-viewport: 576px;
+$phone-viewport: 768px;
+$tablet-viewport: 991px;
+$large-screen-viewport: 1199px;
+
+
+// -------------------- FONTS VARIABLES -------------------- //
+$font-1: "Poppins", sans-serif;
+
+// -------------------- COLORS VARIABLES -------------------- //
+$basic-color-white:#ffffff;
+$basic-color-dark:#292929;
+$basic-color-grey-light: #e5e5e5;
+$basic-color-grey-dark: #adb2b8;
+$shadow-color1: rgba(0, 0, 0, 0.12);
+$shadow-color2: rgba(0, 0, 0, 0.24);
+
+$color-1: #358597;
+$color-1-lighter: #5D9DAC;
+$color-1-darker: #286471;
+$color-2: #262F53;
+$color-2-lighter: #515975;
+$color-2-darker: #1C233E;
+$color-3: #F4A896;
+$color-3-lighter: #F6B9AB;
+$color-3-darker: #B77E71;
+$light: #b9b9b9;
+$light-bg: #f7f7f7;
+$success: #28a745;
+$success-lighter: #53b96a;
+$success-lightest: #7eca8f;
+$success-darker: #1e7d34;
+$success-darkest: #145423;
+$danger: #dc3545;
+$danger-lighter: #e35d6a;
+$danger-lightest: #ea868f;
+$danger-darker: #a52834;
+$danger-darkest: #6c0f18;
+$warning: #ffc107;
+$warning-lighter: #ffcd39;
+$warning-lightest: #ffda6a;
+$warning-darker: #bf9105;
+$warning-darkest: #806104;
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+:root {
+  --basic-color-white: #{$basic-color-white};
+  --basic-color-dark: #{$basic-color-dark};
+  --basic-color-grey-light: #{$basic-color-grey-light};
+  --basic-color-grey-dark: #{$basic-color-grey-dark};
+  --shadow-color1: #{$shadow-color1};
+  --shadow-color2: #{$shadow-color2};
+
+  --prim-color: #{$color-1};
+  --lighter-prim-color: #{$color-1-lighter};
+  --darker-prim-color: #{$color-1-darker};
+  --sec-color: #{$color-2};
+  --lighter-sec-color: #{$color-2-lighter};
+  --darker-sec-color: #{$color-2-darker};
+  --third-color: #{$color-3};
+  --lighter-third-color: #{$color-3-lighter};
+  --darker-third-color: #{$color-3-darker};
+  --light-color: #{$light};
+  --light-bg-color: #{$light-bg};
+  --success-color: #{$success};
+  --lighter-success-color: #{$success-lighter};
+  --lightest-success-color: #{$success-lightest};
+  --darker-success-color: #{$success-darker};
+  --darkest-success-color: #{$success-darkest};
+  --danger-color: #{$danger};
+  --lighter-danger-color: #{$danger-lighter};
+  --lightest-danger-color: #{$danger-lightest};
+  --darker-danger-color: #{$danger-darker};
+  --darkest-danger-color: #{$danger-darkest};
+  --warning-color: #{$warning};
+  --lighter-warning-color: #{$warning-lighter};
+  --lightest-warning-color: #{$warning-lightest};
+  --darker-warning-color: #{$warning-darker};
+  --darkest-warning-color: #{$warning-darkest};
+}
+
+@mixin small_mobile {
+  @media (max-width: $small-phone-viewport) { @content; }
+}
+
+@mixin mobile {
+  @media (max-width: $phone-viewport) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: $phone-viewport) and (max-width: $tablet-viewport) { @content; }
+}
+
+@mixin mobile_and_tablet {
+  @media (max-width: $tablet-viewport) { @content; }
+}
+
+@mixin large_screen {
+  @media (min-width: $tablet-viewport) { @content; }
+}
+
+@mixin tablet_and_large_screen {
+  @media (min-width: $phone-viewport) { @content; }
+}
+
+@mixin very_large_screen {
+  @media (min-width: $large-screen-viewport) { @content; }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 20px 70px;
+  font-family: $font-1;
+  background-color: var(--basic-color-white);
+  color: var(--basic-color-dark);
+
+  &.clicked {
+    overflow: hidden;
+  }
+
+  @include mobile_and_tablet {
+    margin: 20px 30px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: var(--prim-color);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--darker-prim-color);
+  }
+}
+
+.container {
+  padding: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+// -------------------- BUTTON CLASSES -------------------- //
+.button-w150 {
+  width: 150px;
+  padding: 10px;
+}
+
+.button-w200 {
+  width: 200px;
+  padding: 10px;
+}
+
+.button-w250 {
+  width: 250px;
+  padding: 10px;
+}
+
+.button-primary {
+  background-color: var(--prim-color);
+  color: var(--basic-color-white);
+  border: 2px solid var(--prim-color);
+
+  &:hover {
+    background-color: var(--darker-prim-color);
+    color: var(--basic-color-white);
+    border: 2px solid var(--darker-prim-color);
+  }
+}
+
+.button-outline-primary {
+  background-color: var(--basic-color-white);
+  color: var(--prim-color);
+  border: 2px solid var(--prim-color);
+
+  &:hover {
+    background-color: var(--prim-color);
+    color: var(--basic-color-white) !important;
+  }
+}
+
+.button-secondary {
+  background-color: var(--sec-color);
+  color: var(--basic-color-white);
+  border: 2px solid var(--sec-color);
+
+  &:hover, &:focus {
+    background-color: var(--darker-sec-color);
+    color: var(--basic-color-white);
+    border: 2px solid var(--darker-sec-color);
+  }
+}
+
+.button-ternary {
+  background-color: var(--third-color);
+  color: var(--basic-color-white);
+  border: 2px solid var(--third-color);
+
+  &:hover, &:focus {
+    background-color: var(--darker-third-color);
+    color: var(--basic-color-white);
+    border: 2px solid var(--darker-third-color);
+  }
+}
+
+.button-success {
+  background-color: var(--success-color);
+  border: 2px solid var(--success-color);
+  color: var(--basic-color-white);
+
+  &:hover, &:focus {
+    background-color: var(--darker-success-color);
+    border: 2px solid var(--darker-success-color);
+    color: var(--basic-color-white);
+  }
+}
+
+.button-danger {
+  background-color: var(--danger-color);
+  border: 2px solid var(--danger-color);
+  color: var(--basic-color-white);
+
+  &:hover, &:focus {
+    background-color: var(--darker-danger-color);
+    border: 2px solid var(--darker-danger-color);
+    color: var(--basic-color-white);
+  }
+}
+
+.button-warning {
+  background-color: var(--warning-color);
+  border: 2px solid var(--warning-color);
+  color: var(--basic-color-white);
+
+  &:hover, &:focus {
+    background-color: var(--darker-warning-color);
+    border: 2px solid var(--darker-warning-color);
+    color: var(--basic-color-white);
+  }
+}
+
+.button-dropdown {
+  position: relative;
+}
+
+.button-modal {
+  width: 200px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+
+// -------------------- FONT COLOR CLASSES -------------------- //
+.text-primary {
+  color: var(--prim-color) !important;
+}
+
+.text-secondary {
+  color: var(--sec-color) !important;
+}
+
+.text-ternary {
+  color: var(--third-color) !important;
+}
+
+.text-dark {
+  color: var(--basic-color-dark);
+}
+
+.text-black {
+  color: #000000;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-small {
+  font-size: 14px;
+
+  @include mobile {
+    font-size: 12px;
+
+  }
+}
+
+
+// -------------------- BOX CLASSES -------------------- //
+.box-shadow {
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+}
+
+.box-border-grey {
+  border: 2px solid var(--basic-color-grey-dark);
+}
+
+
+// -------------------- BORDER CLASSES -------------------- //
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.border-radius-top-5 {
+  border-radius: 5px 5px 0 0 !important; 
+}
+
+.border-radius-bottom-5 {
+  border-radius: 0 0 5px 5px !important; 
+}
+
+.border-radius-50 {
+  border-radius: 50px;
+}
+
+.border-top-grey {
+  border-top: 2px solid var(--basic-color-grey-dark);;
+}
+
+.border-bottom-grey {
+  border-bottom: 2px solid var(--basic-color-grey-dark);;
+}
+
+.border-left-grey {
+  border-left: 2px solid var(--basic-color-grey-dark);;
+}
+
+.border-right-grey {
+  border-right: 2px solid var(--basic-color-grey-dark);;
+}
+
+// -------------------- BACKGROUND CLASSES -------------------- //
+.bg-primary {
+  background-color: var(--prim-color) !important;
+}
+
+.bg-grey-light {
+  background-color: var(--basic-color-grey-light) !important;
+}
+
+.bg-grey-dark {
+  background-color: var(--basic-color-grey-dark) !important;
+}
+
+
+// -------------------- MARGIN CLASSES -------------------- //
+.margin-mobile {
+  @include mobile {
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
