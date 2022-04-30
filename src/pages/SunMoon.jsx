@@ -1,12 +1,12 @@
 // CONFIG IMPORTS
 import React from 'react';
 
-const SunMoonRise = () => {
+const SunMoon = () => {
   return (
-    <div className="sun-moon-rise">
+    <div className="sun-moon">
       <h1>Sun and Moon page</h1>
     </div>
   );
 };
 
-export default SunMoonRise;
+export default SunMoon;
