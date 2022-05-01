@@ -2,6 +2,9 @@
 import React, {useEffect} from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+// ASSETS IMPORTS
+import logo from '../assets/logos/Disco-weather-logo.svg';
+
 const NavigationMobile = () => {
   const location = useLocation();
 
@@ -19,14 +22,11 @@ const NavigationMobile = () => {
   }, [location]);
 
   return (
-    <div className="navigation-mobile d-md-none fixed-bottom">
-      {/* <NavLink exact="true" to={navElement.navlink} className="navlink">
-        <div className="card-content p-2">
-          <img src={navElement.img} alt={navElement.title + " icon"} className="illustration align-self-center" />
-          <h4 className="fw-bold text-center mb-0 pt-2">{navElement.title}</h4>
-        </div>
-      </NavLink> */}
-      trwer
+    <div className="navigation-mobile d-md-none fixed-bottom d-flex">
+      <NavLink exact="true" to="/current-weather" className="current-weather-section col-3 d-flex justify-content-center p-0"></NavLink>
+      <NavLink exact="true" to="/forecast" className="forecast-section col-3 d-flex justify-content-center p-0"></NavLink>
+      <NavLink exact="true" to="/sun-moon-charts" className="sun-moon-section col-3 d-flex justify-content-center p-0"></NavLink>
+      <NavLink exact="true" to="/tide-tables" className="tide-section col-3 d-flex justify-content-center p-0"></NavLink>
     </div>
   );
 };

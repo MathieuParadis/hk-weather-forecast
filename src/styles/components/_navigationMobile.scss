@@ -1,5 +1,54 @@
 .navigation-mobile {
   background-color: var(--light-bg-color);
-  margin: -20px -30px 0 -30px;
-  padding: 15px 30px;
+  // margin: 0 -30px 0 -30px;
+  // padding: 0 30px;
+  height: 50px;
+
+  .current-weather-section {
+    background-image: url("../../assets/logos/current_weather_icon_mobile_black.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    // background-position: center;
+
+    &:hover {
+      background-image: url("../../assets/logos/current_weather_icon_mobile_white.svg");
+      background-color: var(--basic-color-dark);
+    }
+  }
+
+  .forecast-section {
+    background-image: url("../../assets/logos/forecast_icon_mobile_black.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    // background-position: center;
+
+    &:hover {
+      background-image: url("../../assets/logos/forecast_icon_mobile_white.svg");
+      background-color: var(--basic-color-dark);
+    }
+  }
+
+  .sun-moon-section {
+    background-image: url("../../assets/logos/sun_moon_icon_mobile_black.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    // background-position: center;
+
+    &:hover {
+      background-image: url("../../assets/logos/sun_moon_icon_mobile_white.svg");
+      background-color: var(--basic-color-dark);
+    }
+  }
+
+  .tide-section {
+    background-image: url("../../assets/logos/tide_icon_mobile_black.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    // background-position: center;
+
+    &:hover {
+      background-image: url("../../assets/logos/tide_icon_mobile_white.svg");
+      background-color: var(--basic-color-dark);
+    }
+  }
 }
