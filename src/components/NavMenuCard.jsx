@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavMenuCard = ({navElement}) => {
   return (
-    <div className="nav-menu-card py-3">
+    <div className="nav-menu-card py-3 pointer">
       <NavLink exact="true" to={navElement.navlink} className="navlink">
         <div className="card-content d-flex flex-column">
           <img src={navElement.img} alt={navElement.title + " icon"} className="illustration align-self-center" />

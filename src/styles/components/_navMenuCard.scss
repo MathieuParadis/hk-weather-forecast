@@ -1,3 +1,5 @@
-// .nav-menu-card {
-
-// }
+.nav-menu-card {
+  &:hover {
+    transform: scale(1.1);
+  }
+}
