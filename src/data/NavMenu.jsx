@@ -5,7 +5,7 @@ import sun_moon_icon from '../assets/logos/sun_moon_icon.svg';
 import tide_icon from '../assets/logos/tide_icon.svg';
 
 
-const rules = {
+const navMenu = {
   homepage: [
     {
       title: "Current weather",
