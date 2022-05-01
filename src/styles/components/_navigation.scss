@@ -1,3 +1,28 @@
-// .navigation {
+.navigation {
+  background-color: var(--light-bg-color);
+  margin: -20px -70px 0 -70px;
+  padding: 15px 70px;
 
-// }
+  @include mobile_and_tablet {
+    margin: -20px -30px 0 -30px;
+    padding: 15px 30px;
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+  .navlink {
+    text-decoration: none;
+    color: var(--basic-color-dark);
+    cursor: pointer;
+  
+    &:hover {
+      color: var(--prim-color);
+    }
+  }
+}
+
+
+
+
