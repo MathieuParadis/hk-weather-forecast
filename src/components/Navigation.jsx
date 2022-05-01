@@ -9,6 +9,7 @@ const Navigation = () => {
       <NavLink exact="true" to="/current-weather" className="navlink">Current weather</NavLink>
       <NavLink exact="true" to="/forecast" className="navlink">Forecast</NavLink>
       <NavLink exact="true" to="/sun-moon-times" className="navlink">Sunrise/Sunset times</NavLink>
+      <NavLink exact="true" to="/tide-tables" className="navlink">Tide tables</NavLink>
     </div>
   );
 };

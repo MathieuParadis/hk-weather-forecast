@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/current-weather" exact="true" element={<CurrentWeather />} />
           <Route path="/forecast" exact="true" element={<Forecast />} />
           <Route path="/sun-moon-times" exact="true" element={<SunMoon />} />
-          <Route path="/tidal" exact="true" element={<Tidal />} />
+          <Route path="/tide-tables" exact="true" element={<Tidal />} />
         </Routes>
       </Router>
     </div>
