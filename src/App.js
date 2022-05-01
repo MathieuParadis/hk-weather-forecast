@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/current-weather" exact="true" element={<CurrentWeather />} />
           <Route path="/forecast" exact="true" element={<Forecast />} />
-          <Route path="/sun-moon-times" exact="true" element={<SunMoon />} />
+          <Route path="/sun-moon-charts" exact="true" element={<SunMoon />} />
           <Route path="/tide-tables" exact="true" element={<Tidal />} />
         </Routes>
       </Router>

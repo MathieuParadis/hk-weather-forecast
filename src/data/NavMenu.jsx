@@ -17,9 +17,9 @@ const navMenu = {
       navlink: "/forecast"
     },
     {
-      title: "Sunrise / Sunset times",
+      title: "Sun / Moon charts",
       img: sun_moon_icon,
-      navlink: "/sun-moon-times"
+      navlink: "/sun-moon-charts"
     },
     {
       title: "Tide tables",
