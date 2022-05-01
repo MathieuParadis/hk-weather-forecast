@@ -2,7 +2,7 @@
 import React from 'react';
 
 // COMPONENTS IMPORTS
-// import RuleCard from '../components/RuleCard';
+import NavMenuCard from '../components/NavMenuCard';
 
 // DATA IMPORTS
 import navMenu from '../data/NavMenu';

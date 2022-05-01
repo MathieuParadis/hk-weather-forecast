@@ -10,18 +10,22 @@ const navMenu = {
     {
       title: "Current weather",
       img: current_weather_icon,
+      navlink: "/current-weather"
     },
     {
       title: "Weather forecast",
       img: forecast_icon,
+      navlink: "/forecast"
     },
     {
       title: "Sunrise / Sunset times",
       img: sun_moon_icon,
+      navlink: "/sun-moon-times"
     },
     {
       title: "Tide tables",
       img: tide_icon,
+      navlink: "/tide-tables"
     },
   ],
   rulespage: [
@@ -71,4 +75,4 @@ const navMenu = {
 
 };
 
-export default rules;
+export default navMenu;
