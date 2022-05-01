@@ -2,4 +2,13 @@
   &:hover {
     transform: scale(1.1);
   }
+  
+  .card-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--sec-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
