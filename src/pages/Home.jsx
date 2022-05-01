@@ -8,6 +8,10 @@ import NavMenuCard from '../components/NavMenuCard';
 import navMenu from '../data/NavMenu';
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="home">
       <h1>Home page</h1>  
@@ -21,9 +25,6 @@ const Home = () => {
             })
           }
         </div>  
-
-
-
     </div>
   );
 };

@@ -1,9 +1,6 @@
 // CONFIG IMPORTS
 import React, {useEffect} from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-
-// ASSETS IMPORTS
-import logo from '../assets/logos/Disco-weather-logo.svg';
+import { NavLink, useLocation, useParams } from 'react-router-dom';
 
 const NavigationMobile = () => {
   const location = useLocation();
@@ -23,10 +20,10 @@ const NavigationMobile = () => {
 
   return (
     <div className="navigation-mobile d-md-none fixed-bottom d-flex">
-      <NavLink exact="true" to="/current-weather" className="current-weather-section col-3 d-flex justify-content-center p-0"></NavLink>
-      <NavLink exact="true" to="/forecast" className="forecast-section col-3 d-flex justify-content-center p-0"></NavLink>
-      <NavLink exact="true" to="/sun-moon-charts" className="sun-moon-section col-3 d-flex justify-content-center p-0"></NavLink>
-      <NavLink exact="true" to="/tide-tables" className="tide-section col-3 d-flex justify-content-center p-0"></NavLink>
+      <NavLink exact="true" to="/current-weather" className={(location.pathname === "/current-weather"  ? 'current-weather-section col-3 d-flex justify-content-center p-0 current-weather-section-active' : 'current-weather-section col-3 d-flex justify-content-center p-0')}></NavLink>
+      <NavLink exact="true" to="/forecast" className={(location.pathname === "/forecast"  ? 'forecast-section col-3 d-flex justify-content-center p-0 forecast-section-active' : 'forecast-section col-3 d-flex justify-content-center p-0')}></NavLink>
+      <NavLink exact="true" to="/sun-moon-charts" className={(location.pathname === "/sun-moon-chart"  ? 'sun-moon-section col-3 d-flex justify-content-center p-0 sun-moon-section-active' : 'sun-moon-section col-3 d-flex justify-content-center p-0')}></NavLink>
+      <NavLink exact="true" to="/tide-tables" className={(location.pathname === "/tide-tables"  ? 'tide-section col-3 d-flex justify-content-center p-0 tide-section-active' : 'tide-section col-3 d-flex justify-content-center p-0')}></NavLink>
     </div>
   );
 };
