@@ -18,12 +18,12 @@ const Navigation = () => {
   }
 
   return (
-    <div className="navigation d-none d-md-flex justify-content-between align-items-center">
+    <div className="navigation d-flex justify-content-between align-items-center">
       <div className="d-flex align-items-center pointer" onClick={refreshPage}>
         <img className="logo" src={logo} alt="MP logo"/>
         <h3 className="ms-3 mb-0">Disco Weather</h3>
       </div>
-      <div className="nav-links d-flex flex-row justify-content-between align-items-center">
+      <div className="nav-links d-none d-md-flex flex-row justify-content-between align-items-center">
         <NavLink exact="true" to="/current-weather" className="me-3">Current weather</NavLink>
         <NavLink exact="true" to="/forecast" className="mx-3">Forecast</NavLink>
         <NavLink exact="true" to="/sun-moon-times" className="mx-3">Sun / Moon charts</NavLink>

@@ -1,7 +1,11 @@
 // CONFIG IMPORTS
-import React from 'react';
+import React, {useEffect} from 'react';
 
 const Forecast = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="forecast">
       <h1>Forecast page</h1>
