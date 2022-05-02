@@ -38,7 +38,7 @@ const CurrentWeather = () => {
         { weatherData !== '' &&
           weatherData.rainfall.data.map((element) => {
             return(
-              <WeatherDistrictCard data={element} />
+              <WeatherDistrictCard data={element} key={element.rainfall.data.place} />
             )
           })
         }

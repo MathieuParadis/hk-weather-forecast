@@ -8,9 +8,11 @@ const WeatherDistrictCard = ({data}) => {
   }
 
   return (
-    <div className="weather-district-card">
-      <h4>{replaceSpecialCharacterInString(data.place)}</h4>
+    <div className="weather-district-card d-flex justify-content-center align-items-center">
+      <div className="card-content p-3 border-radius-5">
+        <h5 className="text-center">{replaceSpecialCharacterInString(data.place)}</h5>
 
+      </div>
     </div>
   );
 };
