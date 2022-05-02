@@ -52,6 +52,7 @@ const Forecast = () => {
       </div>
 
 
+
     </div>
   );
 };

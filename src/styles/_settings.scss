@@ -20,6 +20,7 @@ $basic-color-grey-dark: #adb2b8;
 $shadow-color1: rgba(0, 0, 0, 0.12);
 $shadow-color2: rgba(0, 0, 0, 0.24);
 
+
 $color-1: #358597;
 $color-1-lighter: #5D9DAC;
 $color-1-darker: #286471;
@@ -46,6 +47,7 @@ $warning-lighter: #ffcd39;
 $warning-lightest: #ffda6a;
 $warning-darker: #bf9105;
 $warning-darkest: #806104;
+$sky-blue: #1e69aa;
 
 
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -83,6 +85,7 @@ $warning-darkest: #806104;
   --lightest-warning-color: #{$warning-lightest};
   --darker-warning-color: #{$warning-darker};
   --darkest-warning-color: #{$warning-darkest};
+  --sky-blue-color: #{$sky-blue};
 }
 
 @mixin small_mobile {
