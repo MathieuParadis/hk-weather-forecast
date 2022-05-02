@@ -6,60 +6,40 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-
-    &:hover {
-      background-color: var(--basic-color-dark);
-    }
   }
 
   .current-weather-section {
     background-image: url("../../assets/logos/current_weather_icon_mobile_black.svg");
-
-    &:hover {
-      background-image: url("../../assets/logos/current_weather_icon_mobile_white.svg");
-    }
   }
 
-  .current-weather-section-active {
+  .current-weather-sectio:hover, .current-weather-section-active {
     background-color: var(--basic-color-dark);
     background-image: url("../../assets/logos/current_weather_icon_mobile_white.svg");
   }
 
   .forecast-section {
     background-image: url("../../assets/logos/forecast_icon_mobile_black.svg");
-
-    &:hover {
-      background-image: url("../../assets/logos/forecast_icon_mobile_white.svg");
-    }
   }
 
-  .forecast-section-active {
+  .forecast-section:hover, .forecast-section-active {
     background-color: var(--basic-color-dark);
     background-image: url("../../assets/logos/forecast_icon_mobile_white.svg");
   }
 
   .sun-moon-section {
     background-image: url("../../assets/logos/sun_moon_icon_mobile_black.svg");
-
-    &:hover {
-      background-image: url("../../assets/logos/sun_moon_icon_mobile_white.svg");
-    }
   }
 
-  .sun-moon-section-active {
+  .sun-moon-section:hover, .sun-moon-section-active {
     background-color: var(--basic-color-dark);
     background-image: url("../../assets/logos/sun_moon_icon_mobile_white.svg");
   }
 
   .tide-section {
     background-image: url("../../assets/logos/tide_icon_mobile_black.svg");
-
-    &:hover {
-      background-image: url("../../assets/logos/tide_icon_mobile_white.svg");
-    }
   }
 
-  .tide-section-active {
+  .tide-section:hover, .tide-section-active {
     background-color: var(--basic-color-dark);
     background-image: url("../../assets/logos/tide_icon_mobile_white.svg");
   }
