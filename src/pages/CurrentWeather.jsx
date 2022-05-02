@@ -34,11 +34,13 @@ const CurrentWeather = () => {
   return (
     <div className="current-weather">
       <h1>Current weather page</h1>
+
+      
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
         { weatherData !== '' &&
           weatherData.rainfall.data.map((element) => {
             return(
-              <WeatherDistrictCard data={element} key={element.rainfall.data.place} />
+              <WeatherDistrictCard data={element} key={element.place} />
             )
           })
         }
