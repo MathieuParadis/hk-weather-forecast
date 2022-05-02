@@ -17,10 +17,10 @@ const WeatherForecastCard = ({data}) => {
       <div className="card-content p-3 border-radius-5">
         <h5 className="text-center">{data.forecastDate}</h5>
         <h5 className="text-center">{data.week}</h5>
-        <img src={`${weather_icon_url}${data.ForecastIcon}.png` } alt="PSR icon" />
+        <img src={`${weather_icon_url}${data.ForecastIcon}.png`} alt="weather forecast icon" />
         <p>Temperature: {data.forecastMintemp.value} - {data.forecastMaxtemp.value}</p>
         <p>Humidity: {data.forecastMinrh.value} - {data.forecastMaxrh.value}</p>
-        <img src={`${psr_icon_url}${formatPSR(data.PSR)}_50.png` } alt="PSR icon" />
+        <img src={`${psr_icon_url}${formatPSR(data.PSR)}_50.png`} alt="PSR icon" />
         <p>{data.PSR}</p>
 
       </div>
