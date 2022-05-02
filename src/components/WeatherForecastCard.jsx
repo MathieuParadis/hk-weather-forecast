@@ -6,6 +6,11 @@ const WeatherForecastCard = ({data}) => {
 
   const url = "https://www.hko.gov.hk/textonly/v2/explain/wxicon_e.htm";
 
+  const formatPSR = (string) => {
+    const array = string.split(" ");
+    return array.join('')
+  }
+
 
   return (
     <div className="weather-forecast-card">
@@ -15,7 +20,8 @@ const WeatherForecastCard = ({data}) => {
         <img src={`${weather_icon_url}${data.ForecastIcon}.png` } alt="PSR icon" />
         <p>Temperature: {data.forecastMintemp.value} - {data.forecastMaxtemp.value}</p>
         <p>Humidity: {data.forecastMinrh.value} - {data.forecastMaxrh.value}</p>
-        <img src={`${psr_icon_url}${data.PSR}_50.png` } alt="PSR icon" />
+        <img src={`${psr_icon_url}${formatPSR(data.PSR)}_50.png` } alt="PSR icon" />
+        <p>{data.PSR}</p>
 
       </div>
     </div>
