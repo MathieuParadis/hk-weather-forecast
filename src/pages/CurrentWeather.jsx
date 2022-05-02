@@ -1,6 +1,9 @@
 // CONFIG IMPORTS
 import React, {useEffect, useState} from 'react';
 
+// COMPONENTS IMPORTS
+import WeatherCard from '../components/WeatherCard';
+
 const CurrentWeather = () => {
   const [weatherData, setWeatherData] = useState('');
   const getWeatherData = () => {
@@ -20,12 +23,6 @@ const CurrentWeather = () => {
     });
   }
 
-  const replaceSpecialCharacterInString = (string) => {
-    const array = string.split(" ");
-    const modifiedArray = array.map((word) => word === '&amp;' ? word = '&' : word);
-    return modifiedArray.join(' ')
-  }
-
     useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -37,24 +34,15 @@ const CurrentWeather = () => {
   return (
     <div className="current-weather">
       <h1>Current weather page</h1>
-
       <div className="row row-cols-2 row-cols-md-4 g-4 mb-4">
-
         { weatherData !== '' &&
           weatherData.rainfall.data.map((element) => {
             return(
-              <div>
-                <h4>{replaceSpecialCharacterInString(element.place)}</h4>
-              </div>
+              <WeatherCard data={element} />
             )
           })
         }
-
-
       </div>
-
-
-
     </div>
   );
 };
