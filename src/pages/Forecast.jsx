@@ -5,7 +5,9 @@ import React, {useEffect, useState} from 'react';
 import WeatherForecastCard from '../components/WeatherForecastCard';
 
 const Forecast = () => {
+  const [weatherGeneralSituation, setWeatherGeneralSituation] = useState('');
   const [weatherForecastData, setWeatherForecastData] = useState('');
+
   const getWeatherForecastData = () => {
     const url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en';
     const icon_url = 'https://www.hko.gov.hk/images/HKOWxIconOutline/pic53.png';
@@ -20,7 +22,8 @@ const Forecast = () => {
     })
     .then(response => {
         console.log(response);
-        setWeatherForecastData(response);
+        setWeatherGeneralSituation(response.generalSituation)
+        setWeatherForecastData(response.weatherForecast);
     });
   }
 
@@ -37,14 +40,14 @@ const Forecast = () => {
       <h1>Forecast page</h1>
       <div>
         <h3>General situation</h3>
-        <p>{weatherForecastData.generalSituation}</p>
+        <p>{weatherGeneralSituation}</p>
       </div>
 
       <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
         { weatherForecastData !== '' &&
-          weatherForecastData.rainfall.data.map((element) => {
+          weatherForecastData.map((element) => {
             return(
-              <WeatherForecastCard data={element} key={element.place} />
+              <WeatherForecastCard key={element.forecastDate}/>
             )
           })
         }
