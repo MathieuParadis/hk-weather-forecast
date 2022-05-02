@@ -10,8 +10,6 @@ const Forecast = () => {
 
   const getWeatherForecastData = () => {
     const url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en';
-    const icon_url = 'https://www.hko.gov.hk/images/HKOWxIconOutline/pic53.png';
-    const psr_icon_url = 'https://www.hko.gov.hk/common/images/PSRHigh_50.png';
 
     fetch(url, {
       method: "GET",
@@ -47,7 +45,7 @@ const Forecast = () => {
         { weatherForecastData !== '' &&
           weatherForecastData.map((element) => {
             return(
-              <WeatherForecastCard key={element.forecastDate}/>
+              <WeatherForecastCard data={element} key={element.forecastDate}/>
             )
           })
         }
