@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 
 // COMPONENTS IMPORTS
-import WeatherCard from '../components/WeatherCard';
+import WeatherDistrictCard from '../components/WeatherDistrictCard';
 
 const CurrentWeather = () => {
   const [weatherData, setWeatherData] = useState('');
@@ -34,11 +34,11 @@ const CurrentWeather = () => {
   return (
     <div className="current-weather">
       <h1>Current weather page</h1>
-      <div className="row row-cols-2 row-cols-md-4 g-4 mb-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-4">
         { weatherData !== '' &&
           weatherData.rainfall.data.map((element) => {
             return(
-              <WeatherCard data={element} />
+              <WeatherDistrictCard data={element} />
             )
           })
         }
