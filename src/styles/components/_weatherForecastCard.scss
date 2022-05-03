@@ -6,6 +6,7 @@
     border: solid 3px var(--sec-color);
     background-color: var(--prim-color);
     color: var(--basic-color-white);
+    text-align: center;
     overflow: hidden;
 
     .weather-forecast-icon {
@@ -27,14 +28,7 @@
       z-index: 9;
       transition: all 0.8s;
       visibility: visible;
-      opacity: 0.85;
-      border-radius: 4px;
-    }
-
-    &:hover {
-      .overlay, .weather-info {
-        transform: translateY(-100%);
-      }
+      opacity: 0.9;
     }
 
     .weather-info {
@@ -53,5 +47,10 @@
       border-radius: 4px;
     }
 
+    &:hover {
+      .overlay, .weather-info {
+        transform: translateY(-100%);
+      }
+    }
   }
 }

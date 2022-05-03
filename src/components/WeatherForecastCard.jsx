@@ -25,8 +25,8 @@ const WeatherForecastCard = ({data}) => {
     <div className="weather-forecast-card pointer">
       <div className="card-content border-radius-5">
         <div className="d-flex flex-column justify-content-center align-items-center p-3">
-          <h3 className="text-center">{formatDate(data.forecastDate)}</h3>
-          <p className="text-center h5">{data.week}</p>
+          <h3>{formatDate(data.forecastDate)}</h3>
+          <p className="h5">{data.week}</p>
           <img src={`${weather_icon_url}${data.ForecastIcon}.png`} alt="weather forecast icon" className="weather-forecast-icon"/>
           <p className="h5 fw-bold">{data.forecastMintemp.value} - {data.forecastMaxtemp.value} °C</p>
           <p className="h5 fw-bold">{data.forecastMinrh.value} - {data.forecastMaxrh.value} %</p>
@@ -36,8 +36,15 @@ const WeatherForecastCard = ({data}) => {
           </div>
         </div>
         <div className="overlay"></div>
-        <div className="weather-info">
-          <h3 className="text-center">{data.forecastWeather}</h3>
+        <div className="weather-info p-3">
+          <div className="mb-3">
+            <h3 className="text-secondary">Weather</h3>
+            <p className="h5">{data.forecastWeather}</p>
+          </div>
+          <div>
+            <h3 className="text-secondary">Wind</h3>
+            <p className="h5">{data.forecastWind}</p>
+          </div>
         </div>
       </div>
     </div>
