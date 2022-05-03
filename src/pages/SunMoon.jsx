@@ -8,7 +8,7 @@ import Papa from 'papaparse';
 import SunChart  from '../components/SunChart';
 
 const SunMoon = () => {
-  const [parsedCsvData, setParsedCsvData] = useState(null);
+  const [parsedSunCsvData, setParsedSunCsvData] = useState(null);
 
   const parseFile = (file) => {
     fetch(file)
@@ -29,7 +29,7 @@ const SunMoon = () => {
         obj.push(objEntry);
       })
 
-      console.log(obj);
+      setParsedSunCsvData(obj);
     });
   }
 
@@ -44,14 +44,10 @@ const SunMoon = () => {
       <h1>Sun and Moon page</h1>
 
     {
-      parsedCsvData && parsedCsvData.map((x) => {
-        return (
-          x[0]
-        )
-      })
+      parsedSunCsvData && 
+      <SunChart sunData={parsedSunCsvData} />
     }
        
-      {/* <SunChart /> */}
     </div>
   );
 };
