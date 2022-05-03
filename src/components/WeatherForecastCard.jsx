@@ -18,19 +18,19 @@ const WeatherForecastCard = ({data}) => {
     const selectedMonthName = months[parseInt(month) - 1];
     const day = date[6] + date[7];
     
-    return day + " " + selectedMonthName
+    return day + " " + selectedMonthName.slice(0, 3)
   }
 
   return (
     <div className="weather-forecast-card">
       <div className="card-content d-flex flex-column justify-content-center align-items-center p-3 border-radius-5">
-        <h5 className="text-center">{formatDate(data.forecastDate)}</h5>
-        <h5 className="text-center">{data.week}</h5>
+        <h3 className="text-center">{formatDate(data.forecastDate)}</h3>
+        <p className="text-center h5">{data.week}</p>
         <img src={`${weather_icon_url}${data.ForecastIcon}.png`} alt="weather forecast icon" className="weather-forecast-icon"/>
-        <p>{data.forecastMintemp.value} - {data.forecastMaxtemp.value} °C</p>
-        <p>{data.forecastMinrh.value} - {data.forecastMaxrh.value} %</p>
+        <p className="h5 fw-bold">{data.forecastMintemp.value} - {data.forecastMaxtemp.value} °C</p>
+        <p className="h5 fw-bold">{data.forecastMinrh.value} - {data.forecastMaxrh.value} %</p>
         <div className="temp-section d-flex align-items-center">
-          <img src={`${psr_icon_url}${formatPSR(data.PSR)}_50.png`} alt="PSR icon" className="PSR-icon"/>
+          <img src={`${psr_icon_url}${formatPSR(data.PSR)}_50.png`} alt="PSR icon" className="PSR-icon"/>&nbsp;&nbsp;
           <p className="m-0">{data.PSR}</p>
         </div>
       </div>
