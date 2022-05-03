@@ -3,17 +3,17 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#1E69AA;}
 </style>
 <g>
 	<rect x="1" y="191.2" class="st0" width="45" height="26.8"/>
 	<rect x="142.7" y="49.6" class="st0" width="26.8" height="45"/>
 	
-		<rect x="229.5" y="93.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.0436 209.5726)" class="st0" width="45" height="26.8"/>
+		<rect x="229.5" y="93.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.0267 209.6176)" class="st0" width="45" height="26.8"/>
 	
-		<rect x="49.4" y="88.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -59.9872 76.8618)" class="st0" width="26.8" height="45"/>
+		<rect x="49.4" y="88.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -59.9657 76.8351)" class="st0" width="26.8" height="45"/>
 	
-		<rect x="38.5" y="283.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -191.8241 130.0118)" class="st0" width="45" height="26.8"/>
+		<rect x="38.5" y="283.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -191.8544 130.0316)" class="st0" width="45" height="26.8"/>
 	<path class="st0" d="M171.5,240c0.6,9.5,2.2,17.7,1.3,25.5c-0.4,3.8-4.9,8.2-8.7,10.3c-29,16.2-44.6,46.8-39.7,79.1
 		c4.6,30.5,28.4,55.2,60,61.9c4.9,1,10.1,1.4,15.2,1.4c64.2,0.1,128.4,0.3,192.5-0.1c36.6-0.2,67.4-26.5,73.9-61.9
 		c6.3-34.3-12.3-69.8-45.6-82.3c-14.3-5.4-30.4-5.8-47.8-8.9c0-4.1,0.1-9.8,0-15.6c-0.5-41.2-34-74.5-74.9-74.5

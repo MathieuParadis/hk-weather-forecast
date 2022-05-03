@@ -19,7 +19,7 @@ const NavigationMobile = () => {
   }, [location]);
 
   return (
-    <div className="navigation-mobile d-md-none fixed-bottom d-flex">
+    <div className="navigation-mobile d-md-none fixed-bottom d-flex py-2">
       <NavLink exact="true" to="/current-weather" className={(location.pathname === "/current-weather"  ? 'current-weather-section col-3 d-flex justify-content-center p-0 current-weather-section-active' : 'current-weather-section col-3 d-flex justify-content-center p-0')}></NavLink>
       <NavLink exact="true" to="/forecast" className={(location.pathname === "/forecast"  ? 'forecast-section col-3 d-flex justify-content-center p-0 forecast-section-active' : 'forecast-section col-3 d-flex justify-content-center p-0')}></NavLink>
       <NavLink exact="true" to="/sun-moon-charts" className={(location.pathname === "/sun-moon-chart"  ? 'sun-moon-section col-3 d-flex justify-content-center p-0 sun-moon-section-active' : 'sun-moon-section col-3 d-flex justify-content-center p-0')}></NavLink>

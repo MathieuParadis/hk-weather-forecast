@@ -25,7 +25,7 @@ const Forecast = () => {
     });
   }
 
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -40,7 +40,6 @@ const Forecast = () => {
         <h3>General situation</h3>
         <p>{weatherGeneralSituation}</p>
       </div>
-
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 d-flex justify-content-center mb-4">
         { weatherForecastData !== '' &&
           weatherForecastData.map((element) => {
@@ -50,13 +49,8 @@ const Forecast = () => {
           })
         }
       </div>
-
-
-
     </div>
   );
 };
 
 export default Forecast;
-
-

@@ -1,6 +1,7 @@
 .navigation-mobile {
   background-color: var(--light-bg-color);
   height: 50px;
+  box-shadow:  0 -8px 10px -5px rgb(130, 126, 126);
 
   .current-weather-section, .forecast-section, .sun-moon-section, .tide-section {
     background-repeat: no-repeat;
@@ -9,38 +10,34 @@
   }
 
   .current-weather-section {
-    background-image: url("../../assets/logos/current_weather_icon_mobile_black.svg");
+    background-image: url("../../assets/logos/current_weather_icon_mobile_grey.svg");
   }
 
   .current-weather-sectio:hover, .current-weather-section-active {
-    background-color: var(--basic-color-dark);
-    background-image: url("../../assets/logos/current_weather_icon_mobile_white.svg");
+    background-image: url("../../assets/logos/current_weather_icon_mobile_blue.svg");
   }
 
   .forecast-section {
-    background-image: url("../../assets/logos/forecast_icon_mobile_black.svg");
+    background-image: url("../../assets/logos/forecast_icon_mobile_grey.svg");
   }
 
   .forecast-section:hover, .forecast-section-active {
-    background-color: var(--basic-color-dark);
-    background-image: url("../../assets/logos/forecast_icon_mobile_white.svg");
+    background-image: url("../../assets/logos/forecast_icon_mobile_blue.svg");
   }
 
   .sun-moon-section {
-    background-image: url("../../assets/logos/sun_moon_icon_mobile_black.svg");
+    background-image: url("../../assets/logos/sun_moon_icon_mobile_grey.svg");
   }
 
   .sun-moon-section:hover, .sun-moon-section-active {
-    background-color: var(--basic-color-dark);
-    background-image: url("../../assets/logos/sun_moon_icon_mobile_white.svg");
+    background-image: url("../../assets/logos/sun_moon_icon_mobile_blue.svg");
   }
 
   .tide-section {
-    background-image: url("../../assets/logos/tide_icon_mobile_black.svg");
+    background-image: url("../../assets/logos/tide_icon_mobile_grey.svg");
   }
 
   .tide-section:hover, .tide-section-active {
-    background-color: var(--basic-color-dark);
-    background-image: url("../../assets/logos/tide_icon_mobile_white.svg");
+    background-image: url("../../assets/logos/tide_icon_mobile_blue.svg");
   }
 }
