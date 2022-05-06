@@ -26,7 +26,7 @@ const Navigation = () => {
       <div className="nav-links d-none d-md-flex flex-row justify-content-between align-items-center">
         <NavLink exact="true" to="/current-weather" className="me-3">Current weather</NavLink>
         <NavLink exact="true" to="/forecast" className="mx-3">Forecast</NavLink>
-        <NavLink exact="true" to="/sun-moon-times" className="mx-3">Sun / Moon charts</NavLink>
+        <NavLink exact="true" to="/sun-moon-charts" className="mx-3">Sun / Moon charts</NavLink>
         <NavLink exact="true" to="/tide-tables" className="ms-3">Tide tables</NavLink>
       </div>
     </div>
